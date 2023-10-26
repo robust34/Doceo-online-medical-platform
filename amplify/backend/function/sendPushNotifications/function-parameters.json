@@ -1,0 +1,56 @@
+{
+  "permissions": {
+    "analytics": {
+      "doceonew": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    },
+    "api": {
+      "doceonew": [
+        "Query"
+      ]
+    }
+  },
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "analyticsDoceonewId",
+      "environmentVariableName": "ANALYTICS_DOCEONEW_ID"
+    },
+    {
+      "cloudFormationParameterName": "analyticsDoceonewRegion",
+      "environmentVariableName": "ANALYTICS_DOCEONEW_REGION"
+    },
+    {
+      "cloudFormationParameterName": "apiDoceonewGraphqlapiendpointoutput",
+      "environmentVariableName": "API_DOCEONEW_GRAPHQLAPIENDPOINTOUTPUT"
+    },
+    {
+      "cloudFormationParameterName": "apiDoceonewGraphqlapiidoutput",
+      "environmentVariableName": "API_DOCEONEW_GRAPHQLAPIIDOUTPUT"
+    },
+    {
+      "cloudFormationParameterName": "apiDoceonewGraphqlapikeyoutput",
+      "environmentVariableName": "API_DOCEONEW_GRAPHQLAPIKEYOUTPUT"
+    },
+    {
+      "cloudFormationParameterName": "env",
+      "environmentVariableName": "ENV"
+    },
+    {
+      "cloudFormationParameterName": "region",
+      "environmentVariableName": "REGION"
+    },
+    {
+      "cloudFormationParameterName": "streamKey",
+      "environmentVariableName": "STREAM_KEY"
+    },
+    {
+      "cloudFormationParameterName": "streamSecret",
+      "environmentVariableName": "STREAM_SECRET"
+    }
+  ]
+}

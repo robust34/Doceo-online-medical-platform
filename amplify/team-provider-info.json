@@ -1,0 +1,191 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-doceonew-dev-222251-authRole",
+      "UnauthRoleArn": "arn:aws:iam::480663785201:role/amplify-doceonew-dev-222251-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::480663785201:role/amplify-doceonew-dev-222251-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-doceonew-dev-222251-deployment",
+      "UnauthRoleName": "amplify-doceonew-dev-222251-unauthRole",
+      "StackName": "amplify-doceonew-dev-222251",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:480663785201:stack/amplify-doceonew-dev-222251/2ed16590-a38b-11ed-a094-069d4242ba5b",
+      "AmplifyAppId": "d2x0j5uv0cj4k2"
+    },
+    "categories": {
+      "auth": {
+        "doceonew9d5671b29d5671b2": {},
+        "userPoolGroups": {}
+      },
+      "notifications": {
+        "Pinpoint": {
+          "Name": "doceonew-dev",
+          "Id": "a8a8b9f7b72746ffb34a7ae3bb08bf04",
+          "Region": "ap-northeast-1"
+        }
+      },
+      "analytics": {
+        "Pinpoint": {
+          "Name": "doceonew-dev",
+          "Id": "a8a8b9f7b72746ffb34a7ae3bb08bf04",
+          "Region": "ap-northeast-1"
+        },
+        "doceonew": {}
+      },
+      "storage": {
+        "doceonew": {}
+      },
+      "function": {
+        "AdminQueriesb07fa963": {
+          "deploymentBucketName": "amplify-doceonew-dev-222251-deployment",
+          "s3Key": "amplify-builds/AdminQueriesb07fa963-5a544c6b42744e6c6166-build.zip"
+        },
+        "addUserToGroup": {
+          "deploymentBucketName": "amplify-doceonew-dev-222251-deployment",
+          "s3Key": "amplify-builds/addUserToGroup-5941336535716a345a56-build.zip"
+        },
+        "createGetStreamToken": {
+          "deploymentBucketName": "amplify-doceonew-dev-222251-deployment",
+          "s3Key": "amplify-builds/createGetStreamToken-57344450494a6565316d-build.zip"
+        },
+        "extractCaption": {
+          "deploymentBucketName": "amplify-doceonew-dev-222251-deployment",
+          "s3Key": "amplify-builds/extractCaption-576470524c6b4e506239-build.zip",
+          "streamKey": "a6rmt92za3p7",
+          "streamSecret": "jx9tp9jcc3f4b6j8732zynqf7byu4tfbjjah266hskgz7h8vnwngfrpzcg2mddwg"
+        },
+        "getRoomChannels": {
+          "deploymentBucketName": "amplify-doceonew-dev-222251-deployment",
+          "s3Key": "amplify-builds/getRoomChannels-6e7a584b4b4f6a75624e-build.zip"
+        },
+        "sendEmailNotification": {
+          "deploymentBucketName": "amplify-doceonew-dev-222251-deployment",
+          "s3Key": "amplify-builds/sendEmailNotification-414c774c383857715461-build.zip",
+          "streamKey": "a6rmt92za3p7",
+          "streamSecret": "jx9tp9jcc3f4b6j8732zynqf7byu4tfbjjah266hskgz7h8vnwngfrpzcg2mddwg",
+          "doctorApp": "https://doceo-dr-mobile-stg.doceo.link/"
+        },
+        "sendPushNotifications": {
+          "deploymentBucketName": "amplify-doceonew-dev-222251-deployment",
+          "s3Key": "amplify-builds/sendPushNotifications-623353676f71766f6d77-build.zip",
+          "streamKey": "a6rmt92za3p7",
+          "streamSecret": "jx9tp9jcc3f4b6j8732zynqf7byu4tfbjjah266hskgz7h8vnwngfrpzcg2mddwg",
+          "analyticsDoceonewId": "a8a8b9f7b72746ffb34a7ae3bb08bf04",
+          "analyticsDoceonewRegion": "ap-northeast-1",
+          "apiDoceonewGraphqlapiendpointoutput": "https://walnk5bjtnbotmbokr5yziwt6q.appsync-api.ap-northeast-1.amazonaws.com/graphql",
+          "apiDoceonewGraphqlapiidoutput": "zbvvibhxdvc3hpdjr7rxl6a7za",
+          "apiDoceonewGraphqlapikeyoutput": "da2-pzwv2syl3bewxpb3vqz4xscxj4",
+          "env": "dev",
+          "region": "ap-northeast-1"
+        }
+      },
+      "api": {
+        "AdminQueries": {},
+        "doceonew": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2x0j5uv0cj4k2",
+          "type": "cicd"
+        }
+      }
+    }
+  },
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-doceonew-prod-214353-authRole",
+      "UnauthRoleArn": "arn:aws:iam::480663785201:role/amplify-doceonew-prod-214353-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::480663785201:role/amplify-doceonew-prod-214353-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-doceonew-prod-214353-deployment",
+      "UnauthRoleName": "amplify-doceonew-prod-214353-unauthRole",
+      "StackName": "amplify-doceonew-prod-214353",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:480663785201:stack/amplify-doceonew-prod-214353/13f237d0-d5c8-11ed-8e33-0e81977defab",
+      "AmplifyAppId": "d2x0j5uv0cj4k2"
+    },
+    "categories": {
+      "auth": {
+        "doceonew9d5671b29d5671b2": {},
+        "userPoolGroups": {}
+      },
+      "analytics": {
+        "doceonew": {},
+        "Pinpoint": {
+          "Name": "doceonew-prod",
+          "Id": "e70f81bd2cf14b0e8fedff779bcf8bb7",
+          "Region": "ap-northeast-1"
+        }
+      },
+      "api": {
+        "AdminQueries": {},
+        "doceonew": {}
+      },
+      "function": {
+        "AdminQueriesb07fa963": {
+          "deploymentBucketName": "amplify-doceonew-prod-214353-deployment",
+          "s3Key": "amplify-builds/AdminQueriesb07fa963-322f7933413959784342-build.zip"
+        },
+        "addUserToGroup": {
+          "deploymentBucketName": "amplify-doceonew-prod-214353-deployment",
+          "s3Key": "amplify-builds/addUserToGroup-44712b64492b54364b32-build.zip"
+        },
+        "createGetStreamToken": {
+          "deploymentBucketName": "amplify-doceonew-prod-214353-deployment",
+          "s3Key": "amplify-builds/createGetStreamToken-71303057357537527071-build.zip",
+          "streamKey": "qs9wr52gqszz",
+          "streamSecret": "mjy48tf3df4qeh4d77td36w54r4vmrcq63mj99vat5h277n2wandjz7spg8kw8g5"
+        },
+        "extractCaption": {
+          "deploymentBucketName": "amplify-doceonew-prod-214353-deployment",
+          "s3Key": "amplify-builds/extractCaption-74777557445a34754f7a-build.zip",
+          "streamKey": "qs9wr52gqszz",
+          "streamSecret": "mjy48tf3df4qeh4d77td36w54r4vmrcq63mj99vat5h277n2wandjz7spg8kw8g5"
+        },
+        "getRoomChannels": {
+          "deploymentBucketName": "amplify-doceonew-prod-214353-deployment",
+          "s3Key": "amplify-builds/getRoomChannels-6f32763362595454542f-build.zip"
+        },
+        "sendEmailNotification": {
+          "deploymentBucketName": "amplify-doceonew-prod-214353-deployment",
+          "s3Key": "amplify-builds/sendEmailNotification-4a617739737a414f3933-build.zip",
+          "streamKey": "qs9wr52gqszz",
+          "streamSecret": "mjy48tf3df4qeh4d77td36w54r4vmrcq63mj99vat5h277n2wandjz7spg8kw8g5",
+          "doctorApp": "https://doceo-dr-mobile-stg.doceo.link/"
+        },
+        "sendPushNotifications": {
+          "streamKey": "qs9wr52gqszz",
+          "streamSecret": "mjy48tf3df4qeh4d77td36w54r4vmrcq63mj99vat5h277n2wandjz7spg8kw8g5",
+          "deploymentBucketName": "amplify-doceonew-prod-214353-deployment",
+          "s3Key": "amplify-builds/sendPushNotifications-2b586c56742f4b723954-build.zip"
+        },
+        "getDoctors": {
+          "deploymentBucketName": "amplify-doceonew-prod-214353-deployment",
+          "s3Key": "amplify-builds/getDoctors-327070666c754f436367-build.zip",
+          "secretsPathAmplifyAppId": "d2x0j5uv0cj4k2"
+        },
+        "pointRefund": {
+          "deploymentBucketName": "amplify-doceonew-prod-214353-deployment",
+          "s3Key": "amplify-builds/pointRefund-50537179727050455935-build.zip"
+        }
+      },
+      "notifications": {
+        "Pinpoint": {
+          "Name": "doceonew-prod",
+          "Id": "e70f81bd2cf14b0e8fedff779bcf8bb7",
+          "Region": "ap-northeast-1"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2x0j5uv0cj4k2",
+          "type": "cicd"
+        }
+      },
+      "storage": {
+        "doceo": {}
+      }
+    }
+  },
+  "drapp": {
+    "awscloudformation": {}
+  }
+}

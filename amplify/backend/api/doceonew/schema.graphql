@@ -1,0 +1,98 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+# input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!Toe
+
+type Channel {
+  id: String!
+  type: String
+  image: String
+  name: String
+  description: String
+}
+
+type User {
+  name: String
+  role: String
+  image: String
+  firstName: String
+  lastName: String
+}
+
+type Member {
+  user_id: String
+  user: User
+  role: String
+}
+
+type Message {
+  type: String
+  author_name: String
+  text: String
+}
+
+type ChannelDetail {
+  channel: Channel!,
+  members: [Member]!
+  messages: [Message]!
+}
+
+type CreateUserTokenResponse {
+  token: String!
+  rooms: [ChannelDetail]!
+}
+
+type Query  {
+  CreateUserToken(id: ID!):CreateUserTokenResponse @function(name: "createGetStreamToken-${env}") @auth(rules: [{ allow: private, provider: iam }])
+
+  getRoomChannels(room_id: String!):[ChannelDetail]! @function(name: "getRoomChannels-${env}") @auth(rules: [{allow: private, provider: iam}])
+
+  sendPushNotification(type: String!, channel: String!, text: String!):Boolean @function(name: "sendPushNotifications-${env}") @auth(rules: [{allow: private, provider: iam }])
+}
+
+type Hospital @model @auth(rules: [{ allow: public, operations: [read] }, { allow: private, operations: [create,read,update], provider: iam }]) {
+	id: ID!
+	name: String
+	address: String
+	homePageUrl: String
+	logo: String
+	introductionImage: String
+}
+
+type Specialty @model @auth(rules: [{ allow: private, provider: iam }]){
+	id: ID!
+	specialty: String!
+}
+
+type MedicalSpecialist @model @auth(rules: [{ allow: private, provider: iam }]){
+	id: ID!
+	medicalSpecialist: String!
+}
+
+type Trouble @model @auth(rules: [{ allow: private, provider: iam }]){
+	id: ID!
+	trouble: String!
+}
+
+type Notification @model @auth(rules: [{ allow: private, provider: iam }]){
+  id: ID!
+  type: String!
+  channel: String
+  text: String!
+}
+
+type PointHistory @model @auth(rules: [{ allow: private, provider: iam }]){
+  id: ID!
+  type: String!
+  point: Int!
+  userId: String!
+  text: String!
+  doctorId: String
+  messageId: String
+}
+
+type RoomSuggestion @model @auth(rules: [{ allow: private, provider: iam}]) {
+  id: ID!
+  userId: String!
+  roomId: String!
+  suggestion: String!
+}

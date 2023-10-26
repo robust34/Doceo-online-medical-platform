@@ -1,0 +1,34 @@
+{
+  "Records": [
+    {
+      "eventVersion": "2.1",
+      "eventSource": "aws:s3",
+      "awsRegion": "ap-northeast-1",
+      "eventTime": "2023-03-24T01:22:34.022Z",
+      "eventName": "ObjectCreated:Put",
+      "userIdentity": {
+        "principalId": "AWS:AROAW72OLJ3YTEKFMBTWQ:extractCaption-admin"
+      },
+      "requestParameters": {"sourceIPAddress": "10.0.54.140"},
+      "responseElements": {
+        "x-amz-request-id": "FTZGW7QP8EB8EE5M",
+        "x-amz-id-2": "n98VcBblpW82CpGWMQczmCUiUKRzl8XDO8wkwGhZQLawpgnpmuQf1AQFJ1rKgdsBeG4FncYMD2hZfTlbY4JhDXcmd8zz6YgqtAhkkbuUbPQ="
+      },
+      "s3": {
+        "s3SchemaVersion": "1.0",
+        "configurationId": "a2055e83-8660-4e54-ba51-bc1914e19889",
+        "bucket": {
+          "name": "doceonewf04b1396d1b74f9da0b08869cadea72a225422-admin",
+          "ownerIdentity": {"principalId": "A3491NKZFT6WXW"},
+          "arn": "arn:aws:s3:::doceonewf04b1396d1b74f9da0b08869cadea72a225422-admin"
+        },
+        "object": {
+          "key": "public/video/cbb10416-4317-4758-a25b-fe3b50fb510a.json",
+          "size": 15451,
+          "eTag": "5cc550693caf30172eb257610e51edf6",
+          "sequencer": "00641CFB59F4469B9C"
+        }
+      }
+    }
+  ]
+}

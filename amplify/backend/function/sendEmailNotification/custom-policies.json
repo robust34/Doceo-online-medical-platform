@@ -1,0 +1,10 @@
+[
+  {
+    "Action": ["sqs:*"],
+    "Resource": ["arn:aws:sqs:ap-northeast-1:480663785201:Doceo"]
+  },
+  {
+    "Action": ["ses:*"],
+    "Resource": ["arn:aws:ses:ap-northeast-1:480663785201:identity/info@wivil.co.jp"]
+  }
+]

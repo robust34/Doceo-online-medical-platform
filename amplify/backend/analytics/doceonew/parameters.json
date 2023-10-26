@@ -1,0 +1,21 @@
+{
+    "appName": "doceonew",
+    "roleName": "pinpointLambdaRole62e60505",
+    "cloudformationPolicyName": "cloudformationPolicy62e60505",
+    "cloudWatchPolicyName": "cloudWatchPolicy62e60505",
+    "pinpointPolicyName": "pinpointPolicy62e60505",
+    "authPolicyName": "pinpoint_amplify_62e60505",
+    "unauthPolicyName": "pinpoint_amplify_62e60505",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "version": "1",
+  "region": "ap-northeast-1",
+  "userPoolId": "ap-northeast-1_sre9Ypoo1",
+  "userName": "146e621a-bf3b-4166-8509-2b453dc66df3",
+  "callerContext": {
+      "awsSdkVersion": "aws-sdk-unknown-unknown",
+      "clientId": "34rs9b1ja237vs2cr0k6l4r2d9"
+  },
+  "triggerSource": "PostConfirmation_ConfirmSignUp",
+  "request": {
+      "userAttributes": {
+          "sub": "146e621a-bf3b-4166-8509-2b453dc66df3",
+          "email_verified": "true",
+          "birthdate": "03/23/1994",
+          "cognito:user_status": "CONFIRMED",
+          "cognito:email_alias": "talentservice129@gmail.com",
+          "custom:groupname": "Users",
+          "name": "Daniel",
+          "email": "talentservice129@gmail.com"
+      }
+  },
+  "response": {}
+}

@@ -1,0 +1,31 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "doceo-flutter",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "doceo-flutter (profile mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+			"name": "Pixel_4_API_30",
+			"request": "launch",
+			"type": "dart",
+			"deviceId": "emulator-5554"
+		},
+    {
+      "name": "doceo-flutter (release mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    }
+  ]
+}

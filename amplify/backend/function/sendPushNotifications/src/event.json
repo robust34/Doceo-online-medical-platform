@@ -1,0 +1,66 @@
+{
+    "typeName": "Query",
+    "fieldName": "sendPushNotification",
+    "arguments": {
+        "type": "room",
+        "channel": "99766b1a-094d-58d9-9ab8-3ba5f0e24533",
+        "text": "I'm checking whether notification is sent successfully"
+    },
+    "identity": {
+        "accountId": "480663785201",
+        "cognitoIdentityAuthProvider": "'cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_sre9Ypoo1','cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_sre9Ypoo1:CognitoSignIn: 146e621a-bf3b-4166-8509-2b453dc66df3'",
+        "cognitoIdentityAuthType": "authenticated",
+        "cognitoIdentityId": "ap-northeast-1:dcca6dd9-3a2f-4957-8751-8abf26f742ec",
+        "cognitoIdentityPoolId": "ap-northeast-1:225f555f-f5ea-499d-b7fb-7c5c33d7d2e4",
+        "sourceIp": [
+            "188.43.136.42"
+        ],
+        "userArn": "arn:aws:sts::480663785201:assumed-role/ap-northeast-1_sre9Ypoo1-AdminsGroupRole/CognitoIdentityCredentials",
+        "username": "AROAW72OLJ3YZ7NJFJ6G6:CognitoIdentityCredentials"
+    },
+    "source": "None",
+    "request": {
+        "headers": {
+            "x-forwarded-for": "188.43.136.42, 70.132.8.144",
+            "sec-ch-ua-mobile": "?0",
+            "cloudfront-viewer-country": "RU",
+            "cloudfront-is-tablet-viewer": "false",
+            "x-amzn-requestid": "99858896-1939-4336-b7c0-7c71ef1ad642",
+            "pragma": "no-cache",
+            "via": "2.0 485a3f3952abb9ffd104282711d087dc.cloudfront.net (CloudFront)",
+            "cloudfront-forwarded-proto": "https",
+            "origin": "http://localhost:3000",
+            "content-length": "256",
+            "cache-control": "no-cache",
+            "x-forwarded-proto": "https",
+            "accept-language": "en-US,en;q=0.9",
+            "host": "walnk5bjtnbotmbokr5yziwt6q.appsync-api.ap-northeast-1.amazonaws.com",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+            "cloudfront-is-mobile-viewer": "false",
+            "accept": "application/json, text/plain, */*",
+            "x-amz-date": "20230430T082929Z",
+            "cloudfront-viewer-asn": "20485",
+            "cloudfront-is-smarttv-viewer": "false",
+            "x-amzn-appsync-is-vpce-request": "false",
+            "accept-encoding": "gzip, deflate, br",
+            "referer": "http://localhost:3000/",
+            "x-amz-security-token": "IQoJb3JpZ2luX2VjEID//////////wEaDmFwLW5vcnRoZWFzdC0xIkcwRQIgawUH4h5uSepXiw+2w6LnENEFuxpFmKDCeqYGbWMx528CIQCiACQZ9j82fi6/6nwhy2B6pgjQLtjRhwfuihAE4of/tirrBAiK//////////8BEAIaDDQ4MDY2Mzc4NTIwMSIMhhk0Hke1HmmhE68LKr8EgKNuZj+QSYPmED0IScQNg756h3jhkj+O/pH/LqNsjJ76Bp/VA+zjJc1kFXRCOAvUzu/jsz/GIG3uSBbwfmViNVhl3HtPIDgE4hRZQiou/IyM7KZeNnzrE0MWXPj1/USTsKV9hro60HfOmhMfjfHkqdfqHZYnjKobouO6ySDNhJAfgVIea/KVg0URImCgPQn9CrBLPfQYneyLRB7nEXxqNKuLaK298eGh1uADUGuWNBOF/Lj9Cs+hFQRuuxMgugAjTRKS4g9UXs8JkWTDnoIQAztkpjX8Aih3f3e0EHiNvst4wEuRnYuZSbPLD9/yl3c7B9Bz6XosZG5+gjDRo+f8LQZscuaqwrRx5eLhSioe7DvkkjQap9WaZyjSX3Vo/GmLwXczuvTVq8NeWD7+aV1Ir53LNydpr/SmkgDgeZlDBWuXk3QNsD+mAG/7zMDjKkbw0Lkjkf/h/57wrG5pqYretdx9vTe/7QhKcUDXgBQYtUiau/t/vU6Gx09bWVMQfb9yHVNt2vjX6gxJUsAp52YhP/8dami0BaKQxaqjKGMRKZhIFIMOyryU9lNdXbe+MoSJg9mOkvID3xvy8Xp5Xde0Hr4kFTLJIyIdYvAWqI/64Q/9vUKprZX6+G5ZM//ribScj4lPCqeISKsGspjDg0Qa/uqKwpXPpeLEkIo2Pnwen6763mlhNFbFHXX7Vu2Ck0i4t7/EiQL0Gp/5q41ITbPP1AwtON0Xx7dXZkJuCunWsEiRO1bgM1TpDbg/6W1kOrwwps64ogY6hQJ1xRotKcCYE6lsN9RtOaSiy2k9JsGPbnlh+Czoch84Wfa9AiGWV8iBtFdIXS6Q/86/jDkMXf/2wNsl+Cf0xEn8TSIvE2Bkmz9nIqmhC4SHcWQTmdLv1z4R+keIWlWKizIdAb0vGmEkLXr1xmRXMp7F0V6BBaGp3kPRxiSYt1KoshZKJEO9qz54wvZbTU1P7BYqSUArwvDIg6JSRGAWtRVnVJtoGVKfZtxZ+nKexlcMbkwMjIH0RznyqoR5bFowmoOgidstsmBll3NJH57zw+Qhi59XynyYTZneejB3zCz2h8wWWkucdxzcm/qa3eMa7vXk2jLxRqarsiAEJbQ1RBD3pVsm6HU=",
+            "content-type": "application/json; charset=UTF-8",
+            "sec-fetch-mode": "cors",
+            "x-amzn-trace-id": "Root=1-644e273a-235260b93b47952129203481",
+            "x-amz-cf-id": "BIo4V_8kzil6kwvdGIjufIr0k6mKQryX_sn9EKhTTe80edAzRzVQ4Q==",
+            "authorization": "AWS4-HMAC-SHA256 Credential=ASIAW72OLJ3YVFGXTNXL/20230430/ap-northeast-1/appsync/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-security-token;x-amz-user-agent, Signature=86005559819cb5d9382ee3b795978c2bee2e5fb646e215d1fd2e6bc8dbabaeba",
+            "sec-fetch-dest": "empty",
+            "x-amz-user-agent": "aws-amplify/5.0.14 js",
+            "sec-ch-ua-platform": "Windows",
+            "cloudfront-is-desktop-viewer": "true",
+            "sec-fetch-site": "cross-site",
+            "sec-ch-ua": "'Chromium';v='112', 'Google Chrome';v='112', 'Not:A-Brand';v='99'",
+            "x-forwarded-port": "443"
+        },
+        "domainName": "None"
+    },
+    "prev": {
+        "result": {}
+    }
+}

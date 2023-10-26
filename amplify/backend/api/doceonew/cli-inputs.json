@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "doceonew",
+    "serviceName": "AppSync",
+    "defaultAuthType": {
+      "mode": "AWS_IAM"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 365,
+        "apiKeyExpirationDate": "2024-04-09T09:26:53.809Z",
+        "keyDescription": "da2-pzwv2syl3bewxpb3vqz4xscxj4"
+      },
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authdoceonew9d5671b29d5671b2"
+      }
+    ],
+    "conflictResolution": {}
+  }
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "Action": ["transcribe:*"],
+    "Resource": ["*"]
+  },
+  {
+    "Action": ["s3:GetObject"],
+    "Resource": ["*"]
+  }
+]

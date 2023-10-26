@@ -1,0 +1,528 @@
+{
+  "analytics": {
+    "doceonew": {
+      "providerPlugin": "awscloudformation",
+      "service": "Pinpoint"
+    }
+  },
+  "api": {
+    "AdminQueries": {
+      "authorizationType": "AMAZON_COGNITO_USER_POOLS",
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "doceonew9d5671b29d5671b2"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "AdminQueriesb07fa963"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "doceonew": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "doceonew9d5671b29d5671b2"
+        }
+      ],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "apiKeyConfig": {
+                "apiKeyExpirationDate": "2024-04-09T09:26:53.809Z",
+                "apiKeyExpirationDays": 365,
+                "description": "da2-pzwv2syl3bewxpb3vqz4xscxj4"
+              },
+              "authenticationType": "API_KEY"
+            },
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authdoceonew9d5671b29d5671b2"
+              }
+            }
+          ],
+          "defaultAuthentication": {
+            "authenticationType": "AWS_IAM"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "doceonew9d5671b29d5671b2": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "PHONE_NUMBER"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    },
+    "userPoolGroups": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "doceonew9d5671b29d5671b2"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito-UserPool-Groups"
+    }
+  },
+  "function": {
+    "AdminQueriesb07fa963": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "doceonew9d5671b29d5671b2"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "addUserToGroup": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "createGetStreamToken": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "doceonew"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "extractCaption": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "getRoomChannels": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "sendEmailNotification": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Id",
+            "Region"
+          ],
+          "category": "analytics",
+          "resourceName": "doceonew"
+        },
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "doceonew9d5671b29d5671b2"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "sendPushNotifications": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Id",
+            "Region"
+          ],
+          "category": "analytics",
+          "resourceName": "doceonew"
+        },
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
+          ],
+          "category": "api",
+          "resourceName": "doceonew"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "type": "cicd"
+    }
+  },
+  "notifications": {
+    "doceonew": {
+      "channels": [
+        "FCM",
+        "Email"
+      ],
+      "service": "Pinpoint"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_analytics_Pinpoint_Id": {
+      "usedBy": [
+        {
+          "category": "analytics",
+          "resourceName": "Pinpoint"
+        }
+      ]
+    },
+    "AMPLIFY_analytics_Pinpoint_Name": {
+      "usedBy": [
+        {
+          "category": "analytics",
+          "resourceName": "Pinpoint"
+        }
+      ]
+    },
+    "AMPLIFY_analytics_Pinpoint_Region": {
+      "usedBy": [
+        {
+          "category": "analytics",
+          "resourceName": "Pinpoint"
+        }
+      ]
+    },
+    "AMPLIFY_function_AdminQueriesb07fa963_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AdminQueriesb07fa963"
+        }
+      ]
+    },
+    "AMPLIFY_function_AdminQueriesb07fa963_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AdminQueriesb07fa963"
+        }
+      ]
+    },
+    "AMPLIFY_function_addUserToGroup_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "addUserToGroup"
+        }
+      ]
+    },
+    "AMPLIFY_function_addUserToGroup_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "addUserToGroup"
+        }
+      ]
+    },
+    "AMPLIFY_function_createGetStreamToken_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createGetStreamToken"
+        }
+      ]
+    },
+    "AMPLIFY_function_createGetStreamToken_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createGetStreamToken"
+        }
+      ]
+    },
+    "AMPLIFY_function_extractCaption_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "extractCaption"
+        }
+      ]
+    },
+    "AMPLIFY_function_extractCaption_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "extractCaption"
+        }
+      ]
+    },
+    "AMPLIFY_function_extractCaption_streamKey": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "extractCaption"
+        }
+      ]
+    },
+    "AMPLIFY_function_extractCaption_streamSecret": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "extractCaption"
+        }
+      ]
+    },
+    "AMPLIFY_function_getRoomChannels_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getRoomChannels"
+        }
+      ]
+    },
+    "AMPLIFY_function_getRoomChannels_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getRoomChannels"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendEmailNotification_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendEmailNotification"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendEmailNotification_doctorApp": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendEmailNotification"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendEmailNotification_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendEmailNotification"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendEmailNotification_streamKey": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendEmailNotification"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendEmailNotification_streamSecret": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendEmailNotification"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotifications_analyticsDoceonewId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotifications"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotifications_analyticsDoceonewRegion": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotifications"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotifications_apiDoceonewGraphqlapiendpointoutput": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotifications"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotifications_apiDoceonewGraphqlapiidoutput": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotifications"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotifications_apiDoceonewGraphqlapikeyoutput": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotifications"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotifications_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotifications"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotifications_env": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotifications"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotifications_region": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotifications"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotifications_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotifications"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotifications_streamKey": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotifications"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotifications_streamSecret": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotifications"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_appId": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_type": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
+    },
+    "AMPLIFY_notifications_Pinpoint_Id": {
+      "usedBy": [
+        {
+          "category": "notifications",
+          "resourceName": "Pinpoint"
+        }
+      ]
+    },
+    "AMPLIFY_notifications_Pinpoint_Name": {
+      "usedBy": [
+        {
+          "category": "notifications",
+          "resourceName": "Pinpoint"
+        }
+      ]
+    },
+    "AMPLIFY_notifications_Pinpoint_Region": {
+      "usedBy": [
+        {
+          "category": "notifications",
+          "resourceName": "Pinpoint"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "doceonew": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ],
+          "category": "function",
+          "resourceName": "extractCaption"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
+  }
+}

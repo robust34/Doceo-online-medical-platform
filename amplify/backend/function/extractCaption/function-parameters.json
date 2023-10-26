@@ -1,0 +1,14 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "streamKey",
+      "environmentVariableName": "STREAM_KEY"
+    },
+    {
+      "cloudFormationParameterName": "streamSecret",
+      "environmentVariableName": "STREAM_SECRET"
+    }
+  ],
+  "permissions": {}
+}
